@@ -1,12 +1,13 @@
-import { TrustScoringEngine } from './engine';
-import { FraudDetector } from './fraud';
-import { TrustStorage } from './storage';
-import { Agent, Interaction, TrustScore, FraudSignal } from './models';
+import { TrustScoringEngine } from './engine.js';
+import { FraudDetector } from './fraud.js';
+import { TrustStorage } from './storage.js';
+import { Agent, Interaction, TrustScore, FraudSignal } from './models.js';
+import { pathToFileURL } from 'url';
 
-export * from './models';
-export * from './engine';
-export * from './fraud';
-export * from './storage';
+export * from './models.js';
+export * from './engine.js';
+export * from './fraud.js';
+export * from './storage.js';
 
 export class AgentTrustSystem {
   private engine: TrustScoringEngine;
@@ -70,7 +71,7 @@ export class AgentTrustSystem {
 }
 
 // Example usage if run directly
-if (require.main === module) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   (async () => {
     const system = new AgentTrustSystem();
     console.log('--- Initializing Agent Trust System ---');

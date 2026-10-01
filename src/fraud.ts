@@ -1,4 +1,4 @@
-import { Interaction, FraudSignal, Agent } from './models';
+import { Interaction, FraudSignal, Agent } from './models.js';
 
 export class FraudDetector {
   private readonly COLLUSION_THRESHOLD = 0.8;

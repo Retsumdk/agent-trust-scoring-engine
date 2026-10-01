@@ -1,4 +1,4 @@
-import { Agent, Interaction, TrustScore, ScoreHistoryEntry } from './models';
+import { Agent, Interaction, TrustScore, ScoreHistoryEntry } from './models.js';
 
 export class TrustStorage {
   private agents: Map<string, Agent> = new Map();

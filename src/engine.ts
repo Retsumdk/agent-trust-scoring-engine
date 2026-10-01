@@ -1,4 +1,4 @@
-import { Interaction, TrustScore, Agent, ReputationMetadata } from './models';
+import { Interaction, TrustScore, Agent, ReputationMetadata } from './models.js';
 
 export class TrustScoringEngine {
   private readonly DECAY_HALF_LIFE_DAYS = 30;

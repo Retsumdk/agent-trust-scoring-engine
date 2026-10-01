@@ -16,8 +16,10 @@ A production-ready reputation and trust scoring system for autonomous AI agent e
 ## Installation
 
 ```bash
-bun add agent-trust-scoring-engine
+npm install github:Retsumdk/agent-trust-scoring-engine
 ```
+
+> **Using Bun?** Bun blocks a git dependency's lifecycle scripts by default. After installing, run `bun pm trust agent-trust-scoring-engine` so the `prepare` build step runs.
 
 ## Quick Start
 
